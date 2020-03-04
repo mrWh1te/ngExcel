@@ -1,0 +1,80 @@
+$blue: rgb(26, 115, 232);
+$light_blue: rgba(26, 115, 232, .2);
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
+section, div, form, input {
+    box-sizing: border-box;
+}
+
+.container {
+    height: calc(100vh - 64px);
+    width: 100vw;
+}
+
+[gdarea="form"] {
+    form {
+        height: 100%;
+        input {
+            height: 100%;
+            padding: .25rem;
+            border: 0;
+            background: none;
+        }
+    }
+    [gdarea="label"] {
+        display: inline-grid;
+        justify-items: center;
+        align-items: center;
+        text-transform: uppercase;
+    }
+}
+
+[gdarea="column_labels"], [gdarea="row_labels"] {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+[gdarea="spreadsheet"] {
+    overflow: auto;
+    div {
+        display: inline-grid;
+        justify-items: center;
+        align-items: center;
+        border: 1px solid gray;
+    }
+    [gdarea="sheet"] {
+        div {
+            
+            &.active {
+                border: 2px solid $blue;
+            }
+            &:hover {
+                cursor: cell;
+                background-color: $light_blue;
+            }
+        }
+    }
+}
+
+.tool {
+    border: none !important;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.rotate-clockwise-90 {
+    transform: rotate(90deg);
+}
+
+div {
+    width: 4rem;
+}
+
+form {
+    input {
+        width: 100%;
+    }
+}

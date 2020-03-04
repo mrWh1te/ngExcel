@@ -1,0 +1,63 @@
+<section class="container"
+  gdAreas="form | spreadsheet"
+  gdRows="4rem auto">
+
+    <section gdArea="form" 
+        gdAreas="label input"
+        gdColumns="4rem auto">
+        <div gdArea="label">
+            {{ getColumnLabel(activeCellPosition.column) }}{{ activeCellPosition.row }}:
+        </div>
+        <section gdArea="input">
+            <form [formGroup]="activeCellFormGroup">
+                <input type="text" formControlName="active_cell" #active_cell_input autofocus />
+            </form>
+        </section>
+    </section>
+
+    <section 
+        gdArea="spreadsheet" 
+        gdAreas="filler column_labels | row_labels sheet"
+        gdRows="4rem auto"
+        gdColumns="4rem auto">
+
+        <span gdArea="filler"></span>
+
+        <section 
+            gdArea="column_labels"
+            gdAuto="column"
+            gdRows="4rem" 
+            gdColumns="repeat({{columns + 1}}, 4rem)">
+            <div *ngFor="let column of counter(columns); let i = index">
+                {{ getColumnLabel(i + 1) }}
+            </div>
+            <div (click)="addColumnClicked.emit()" class="tool">
+                <mat-icon>arrow_right_alt</mat-icon>
+            </div>
+        </section>
+
+        <section 
+            gdArea="row_labels"
+            gdRows="repeat({{rows + 1}}, 4rem)">
+            <div *ngFor="let row of counter(rows); let i = index">
+                {{ i + 1 }}
+            </div>
+            <div (click)="addRowClicked.emit()" class="tool">
+                <mat-icon class="rotate-clockwise-90">arrow_right_alt</mat-icon>
+            </div>
+        </section>
+
+        <section 
+            gdArea="sheet"
+            gdRows="repeat({{rows}}, 4rem)"
+            gdColumns="repeat({{columns}}, 4rem)">
+            <div 
+                *ngFor="let cell of counter(rows * columns); let i = index" 
+                [class.active]="isCellActive(i)"
+                (click)="cellClick(i)">
+                {{ getCellValue(i) | arithmetic | async }}
+            </div>
+        </section>
+
+    </section>
+</section>
