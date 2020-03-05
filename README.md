@@ -3,7 +3,7 @@
 <img align="right" src="https://raw.githubusercontent.com/mrWh1te/ngExcel/master/spreadsheet.png" width="175" alt="Spreadsheet App Icon" />
 <!-- Icon author: https://pixabay.com/vectors/spreadsheet-application-window-grid-147749/ -->
 
-[App Demo](http://nglibrary-demo.netlify.com)
+[App Demo](http://ngexcel-demo.netlify.com)
 
 Excel Spreadsheet Application with Angular using [ngLibrary](github.com/mrWh1te/ngLibrary) as a base template.
 
