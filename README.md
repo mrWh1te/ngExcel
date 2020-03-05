@@ -1,4 +1,5 @@
 # ngExcel
+[![Netlify Status](https://api.netlify.com/api/v1/badges/24404360-9f85-498c-a9e6-f511f67ede35/deploy-status)](https://app.netlify.com/sites/ngexcel-demo/deploys)
 
 <img align="right" src="https://raw.githubusercontent.com/mrWh1te/ngExcel/master/spreadsheet.png" width="175" alt="Spreadsheet App Icon" />
 <!-- Icon author: https://pixabay.com/vectors/spreadsheet-application-window-grid-147749/ -->
