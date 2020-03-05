@@ -27,6 +27,7 @@ Spreadsheet
     - Algebraic expressions support Spreadsheet Cell Addresses
         - example: `= (A1 + B1)*10`
         - Algebraic expressions must start with `=`, no spaces before
+        - Cell addresses use capital letters
 - Uses CSS Grid directives from Flex-Layout module
     - spreadsheet is entirely done with CSS grid
     - mobile friendly
