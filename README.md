@@ -18,6 +18,16 @@ Have fun!
 
 ### Home Page
 Spreadsheet
+- Add rows (click downward arrow icon)
+- Add columns (click right arrow icon)
+- Reset spreadsheet with top-right icon
+- Enter text, numbers or algebraic expressions for selected cell
+    - Single form input, above spreadsheet with auto-focus feature (after cell click)
+    - Algebraic expressions support Spreadsheet Cell Addresses
+        - example: `= (A1 + B1)*10`
+        - Algebraic expressions must start with `=`, no spaces before
+
+The data module is done with redux, so if you have the Redux devtools installed in your browser, you can play around. Otherwise, open the Chrome/Safari/What have you Devtools for the Console. Every action is logged there with pretty style.
 
 # Architecture Overview
 This project's coding patterns are guided from ngLibrary's core programming values:
@@ -141,7 +151,7 @@ In not re-inventing the wheel, ngLibrary uses these libraries in building its fo
 
 ## Continuous Deployment
 
-Continuous Deployment is setup with [Netlify](https://netlify.com). It automatically deploys the latest PROD build from the `master` branch. See the live [Demo](http://nglibrary-demo.netlify.com). 
+Continuous Deployment is setup with [Netlify](https://netlify.com). It automatically deploys the latest PROD build from the `master` branch. See the live [Demo](http://ngexcel-demo.netlify.com). 
 
 ## Local Development
 
