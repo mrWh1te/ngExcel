@@ -6,7 +6,7 @@
 
 [App Demo](http://ngexcel-demo.netlify.com)
 
-Excel Spreadsheet Application with Angular using [ngLibrary](github.com/mrWh1te/ngLibrary) as a base template.
+Excel Spreadsheet Application built with Angular using [ngLibrary](https://github.com/mrWh1te/ngLibrary) as a base template.
 
 It uses robust architecture to breakdown complexity, found in Enterprise applications, with the best coding patterns established by community leaders in Angular, CDK, RxJS, Angular Flex-Layout, NgRX, Angular Material, and a little bit by me, [Michael Lage](https://github.com/mrWh1te).
 
