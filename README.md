@@ -29,6 +29,7 @@ Spreadsheet
         - Algebraic expressions must start with `=`, no spaces before
 - Uses CSS Grid directives from Flex-Layout module
     - spreadsheet is entirely done with CSS grid
+    - mobile friendly
 
 The data module is done with redux, so if you have the Redux devtools installed in your browser, you can play around. Otherwise, open the Chrome/Safari/What have you Devtools for the Console. Every action is logged there with pretty style.
 
