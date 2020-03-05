@@ -20,7 +20,7 @@ Have fun!
 Spreadsheet
 - Add rows (click downward arrow icon)
 - Add columns (click right arrow icon)
-- Auto-saves spreadsheet state to localstorage
+- Auto-saves/restores spreadsheet to/from localstorage
 - Reset spreadsheet with top-right icon
 - Enter text, numbers or algebraic expressions for selected cell
     - Single form input, above spreadsheet with auto-focus feature (after cell click)
