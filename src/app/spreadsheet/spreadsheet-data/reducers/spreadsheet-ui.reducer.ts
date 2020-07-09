@@ -20,8 +20,8 @@ export const initialState: State = {
     column: 1,
     row: 1
   },
-  rows: 4,
-  columns: 5,
+  rows: 8,
+  columns: 8,
   ids: [],
   entities: {}
 }

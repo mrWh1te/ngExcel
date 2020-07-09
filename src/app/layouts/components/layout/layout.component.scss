@@ -32,7 +32,11 @@ mat-icon.checkout {
   margin-left: 1rem;
 }
 
+body {
+  overflow: hidden;
+}
+
 .main-child-view {
   height: calc(100vh - #{$header-height});
-  overflow-y: auto;
+  // overflow-y: auto;
 }

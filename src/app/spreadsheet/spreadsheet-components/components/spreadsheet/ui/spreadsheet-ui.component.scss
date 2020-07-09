@@ -1,6 +1,11 @@
 $blue: rgb(26, 115, 232);
 $light_blue: rgba(26, 115, 232, .2);
 
+$gray: #F8F9FA;
+$light_gray: #E2E3E3;
+
+$spreadsheet_label_font: tahoma;
+
 html {
     font-family: 'Courier New', Courier, monospace;
 }
@@ -13,7 +18,7 @@ section, div, form, input {
     width: 100vw;
 }
 
-[gdarea="form"] {
+[gdarea="nav"] {
     form {
         height: 100%;
         input {
@@ -21,11 +26,13 @@ section, div, form, input {
             padding: .25rem;
             border: 0;
             background: none;
+            outline: 0;
         }
     }
     [gdarea="label"] {
+        width: 100%;
         display: inline-grid;
-        justify-items: center;
+        justify-items: end;
         align-items: center;
         text-transform: uppercase;
     }
@@ -38,15 +45,18 @@ section, div, form, input {
 
 [gdarea="spreadsheet"] {
     overflow: auto;
+    height: calc(100vh - 64px - 2rem);
     div {
         display: inline-grid;
         justify-items: center;
         align-items: center;
-        border: 1px solid gray;
+        border-right: 1px solid $light_gray;
+        border-bottom: 1px solid $light_gray;
     }
     [gdarea="sheet"] {
         div {
-            
+            width: 6rem;
+            height: 1.5rem;
             &.active {
                 border: 2px solid $blue;
             }
@@ -54,6 +64,32 @@ section, div, form, input {
                 cursor: cell;
                 background-color: $light_blue;
             }
+        }
+    }
+    [gdarea="row_labels"], [gdarea="column_labels"] {
+        div {
+            background-color: $gray;
+            font-family: $spreadsheet_label_font;
+            font-size: .7rem;
+            height: 1.5rem;
+        }
+    }
+    [gdarea="row_labels"] {
+        div {
+            &:first-child {
+                border-top: 1px solid $light_gray;
+            }
+            width: 2.75rem;
+            font-size: .65rem;
+        }
+    }
+    [gdarea="column_labels"] {
+        div {
+            &:first-child {
+                border-left: 1px solid $light_gray;
+            }
+            border-top: 1px solid $light_gray;
+            width: 6rem;
         }
     }
 }
@@ -67,10 +103,6 @@ section, div, form, input {
 
 .rotate-clockwise-90 {
     transform: rotate(90deg);
-}
-
-div {
-    width: 4rem;
 }
 
 form {
