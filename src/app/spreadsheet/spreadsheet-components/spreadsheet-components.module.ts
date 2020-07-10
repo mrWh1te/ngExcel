@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core"
-import { CommonModule } from '@angular/common'
+import { CommonModule, DecimalPipe } from '@angular/common'
 import { ReactiveFormsModule } from '@angular/forms'
 import { MatIconModule } from '@angular/material/icon'
 import { FlexLayoutModule } from '@angular/flex-layout'
@@ -7,7 +7,8 @@ import { FlexLayoutModule } from '@angular/flex-layout'
 import { SpreadsheetComponent } from './components/spreadsheet/smart/spreadsheet.component'
 import { SpreadsheetUiComponent } from './components/spreadsheet/ui/spreadsheet-ui.component'
 import { SpreadsheetDataModule } from '../spreadsheet-data/spreadsheet-data.module'
-import { ArithmeticPipe } from './pipes/arithmetic.pipe'
+import { ExpressionEvaluationPipe } from './pipes/expression-evaluation.pipe'
+import { ConditionalNumberPipe } from './pipes/conditional-number.pipe'
 
 @NgModule({
   imports: [
@@ -20,7 +21,11 @@ import { ArithmeticPipe } from './pipes/arithmetic.pipe'
   declarations: [
     SpreadsheetComponent,
     SpreadsheetUiComponent,
-    ArithmeticPipe
+    ExpressionEvaluationPipe,
+    ConditionalNumberPipe
+  ],
+  providers: [
+    DecimalPipe
   ],
   exports: [
     SpreadsheetComponent

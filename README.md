@@ -1,4 +1,5 @@
 # ngExcel
+[![Build Status](https://travis-ci.com/mrWh1te/ngExcel.svg?branch=master)](https://travis-ci.com/mrWh1te/ngExcel) 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/24404360-9f85-498c-a9e6-f511f67ede35/deploy-status)](https://app.netlify.com/sites/ngexcel-demo/deploys)
 
 <img align="right" src="https://raw.githubusercontent.com/mrWh1te/ngExcel/master/spreadsheet.png" width="175" alt="Spreadsheet App Icon" />
@@ -6,13 +7,11 @@
 
 [App Demo](http://ngexcel-demo.netlify.com) - [Bundles' Report](http://ngexcel-demo.netlify.com/report.html)
 
-Excel Spreadsheet Application built with Angular using [ngLibrary](https://github.com/mrWh1te/ngLibrary) as a base template.
-
-It uses robust architecture to breakdown complexity, found in Enterprise applications, with the best coding patterns established by community leaders in Angular, CDK, RxJS, Angular Flex-Layout, NgRX, Angular Material, and a little bit by me, [Michael Lage](https://github.com/mrWh1te).
+A Spreadsheet Application built with Angular v10 using [ngLibrary](https://github.com/mrWh1te/ngLibrary) as a starting code template, for its Enterprise Reactive architecture.
 
 Have fun!
 
-> Complex applications are like children, in that they need a strong foundation and structure, to grow strong and healthy.
+> Pure mathematics is, in its way, the poetry of logical ideas. - Albert Einstein
 
 ## User Experience
 
@@ -27,7 +26,6 @@ Spreadsheet
     - Algebraic expressions support Spreadsheet Cell Addresses
         - example: `= (A1 + B1)*10`
         - Algebraic expressions must start with `=`, no spaces before
-        - Cell addresses use capital letters
 - Uses CSS Grid directives from Flex-Layout module
     - spreadsheet is entirely done with CSS grid
     - mobile friendly
@@ -150,7 +148,6 @@ In not re-inventing the wheel, ngLibrary uses these libraries in building its fo
 - `@ngrx/store`
 - `@ngrx/effects`
 - `@ngrx/entity`
-- `ngrx-store-localstorage`
 
 [Angular Flex-layout](https://github.com/angular/flex-layout) separates out the layout portion of CSS styling from the CSS code, with programmable directives in the HTML. [Angular Material](https://material.angular.io/) is used for the header toolbar and form. Finally, the drop-down for the Header Basket is powered by the [CDK's Overlay](https://material.angular.io/cdk/overlay/overview). 
 

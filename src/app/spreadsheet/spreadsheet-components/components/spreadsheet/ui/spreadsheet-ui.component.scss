@@ -1,6 +1,11 @@
 $blue: rgb(26, 115, 232);
 $light_blue: rgba(26, 115, 232, .2);
 
+$gray: #F8F9FA;
+$light_gray: #E2E3E3;
+
+$spreadsheet_label_font: tahoma;
+
 html {
     font-family: 'Courier New', Courier, monospace;
 }
@@ -13,21 +18,48 @@ section, div, form, input {
     width: 100vw;
 }
 
-[gdarea="form"] {
+[gdarea="nav"] {
     form {
         height: 100%;
         input {
+            width: 100%;
             height: 100%;
             padding: .25rem;
             border: 0;
             background: none;
+            outline: 0;
+            padding-left: .5rem;
         }
     }
-    [gdarea="label"] {
-        display: inline-grid;
+    [gdarea="add_row"], [gdarea="add_column"] {
+        display: grid;
         justify-items: center;
         align-items: center;
+    }
+    .tool {
+        background: none;
+        border: none !important;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    [gdarea="add_row"] button {
+        justify-self: flex-start;
+        margin-left: .5rem;
+    }
+    [gdarea="add_column"] button {
+        justify-self: flex-end;
+        margin-right: .5rem;
+    }
+    [gdarea="label"] {
+        width: 100%;
+        display: inline-grid;
+        justify-items: end;
+        align-items: center;
+        font-size: 11px;
         text-transform: uppercase;
+        font-weight: 600;
+        font-family: $spreadsheet_label_font;
     }
 }
 
@@ -38,15 +70,20 @@ section, div, form, input {
 
 [gdarea="spreadsheet"] {
     overflow: auto;
+    height: calc(100vh - 64px - 2rem);
     div {
         display: inline-grid;
         justify-items: center;
         align-items: center;
-        border: 1px solid gray;
+        border-right: 1px solid $light_gray;
+        border-bottom: 1px solid $light_gray;
     }
     [gdarea="sheet"] {
         div {
-            
+            width: 6rem;
+            height: 1.5rem;
+            font-family: $spreadsheet_label_font;
+            font-size: .8rem;
             &.active {
                 border: 2px solid $blue;
             }
@@ -56,25 +93,34 @@ section, div, form, input {
             }
         }
     }
-}
-
-.tool {
-    border: none !important;
-    &:hover {
-        cursor: pointer;
+    [gdarea="row_labels"], [gdarea="column_labels"] {
+        div {
+            background-color: $gray;
+            font-family: $spreadsheet_label_font;
+            font-size: .7rem;
+            height: 1.5rem;
+        }
+    }
+    [gdarea="row_labels"] {
+        div {
+            &:first-child {
+                border-top: 1px solid $light_gray;
+            }
+            width: 2.75rem;
+            font-size: .65rem;
+        }
+    }
+    [gdarea="column_labels"] {
+        div {
+            &:first-child {
+                border-left: 1px solid $light_gray;
+            }
+            border-top: 1px solid $light_gray;
+            width: 6rem;
+        }
     }
 }
 
 .rotate-clockwise-90 {
     transform: rotate(90deg);
-}
-
-div {
-    width: 4rem;
-}
-
-form {
-    input {
-        width: 100%;
-    }
 }
