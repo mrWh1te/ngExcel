@@ -21,10 +21,10 @@ export class ExpressionEvaluationPipe implements PipeTransform {
             const expression = value
               .substring(1) // get rid of the equals '='
               .replace(/ /g, '') // remove spaces
-              .replace(/([A-Z]*){1}\d+/g, cellAddress => {
+              .replace(/([aA-zZ]*){1}\d+/g, cellAddress => {
                 // Excel Cell Address Regex
                 // look through the cell positions for a match after converted into Excel Cell Address
-                const cell = cells.filter(cell => cellAddress === getCellAddressByPosition(cell.position))
+                const cell = cells.filter(cell => cellAddress.toUpperCase() === getCellAddressByPosition(cell.position))
 
                 return cell && cell[0] && cell[0].value ? cell[0].value.toString() : cellAddress
               })
