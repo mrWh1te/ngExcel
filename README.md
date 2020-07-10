@@ -11,7 +11,7 @@ A Spreadsheet Application built with Angular v10 using [ngLibrary](https://githu
 
 Have fun!
 
-> Complex applications are like children, in that they need a strong foundation and structure, to grow strong and healthy.
+> Pure mathematics is, in its way, the poetry of logical ideas. - Albert Einstein
 
 ## User Experience
 
