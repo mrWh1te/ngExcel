@@ -5,7 +5,7 @@
 <img align="right" src="https://raw.githubusercontent.com/mrWh1te/ngExcel/master/spreadsheet.png" width="175" alt="Spreadsheet App Icon" />
 <!-- Icon author: https://pixabay.com/vectors/spreadsheet-application-window-grid-147749/ -->
 
-[App Demo](http://ngexcel-demo.netlify.com) - [Bundles' Report](http://ngexcel-demo.netlify.com/report.html)
+[App Demo](http://ngexcel-demo.netlify.app) - [Bundles' Report](http://ngexcel-demo.netlify.app/report.html)
 
 A Spreadsheet Application built with Angular v10 using [ngLibrary](https://github.com/mrWh1te/ngLibrary) as a starting code template, for its Enterprise Reactive architecture.
 
@@ -153,7 +153,7 @@ In not re-inventing the wheel, ngLibrary uses these libraries in building its fo
 
 ## Continuous Deployment
 
-Continuous Deployment is setup with [Netlify](https://netlify.com). It automatically deploys the latest PROD build from the `master` branch. See the live [Demo](http://ngexcel-demo.netlify.com). 
+Continuous Deployment is setup with [Netlify](https://netlify.com). It automatically deploys the latest PROD build from the `master` branch. See the live [Demo](http://ngexcel-demo.netlify.app). 
 
 ## Local Development
 
