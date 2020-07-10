@@ -7,8 +7,8 @@ import { map } from 'rxjs/operators'
 import { selectAllSpreadsheetCells } from '../../spreadsheet-data/selectors/spreadsheet-ui.selectors'
 import { getCellAddressByPosition } from '../../spreadsheet-data/helpers/cell.helpers'
 
-@Pipe({name: 'arithmetic', pure: false})
-export class ArithmeticPipe implements PipeTransform {
+@Pipe({name: 'expression', pure: false})
+export class ExpressionEvaluationPipe implements PipeTransform {
   constructor(private store: Store<any>) {}
 
   transform(value: number|string|undefined): Observable<string|number> {

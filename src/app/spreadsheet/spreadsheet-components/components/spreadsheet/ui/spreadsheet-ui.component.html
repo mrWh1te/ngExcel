@@ -4,12 +4,12 @@
 
     <section gdArea="nav" 
         gdAreas="add_row label input add_column"
-        gdColumns="3rem 3rem auto 3rem">
+        gdColumns="2rem 2rem auto 3rem">
         
         <div gdArea="add_row">
-            <div (click)="addRowClicked.emit()" class="tool">
+            <button (click)="addRowClicked.emit()" class="tool" title="Add Row">
                 <mat-icon class="rotate-clockwise-90">arrow_right_alt</mat-icon>
-            </div>
+            </button>
         </div>
         <div gdArea="label">
             {{ getColumnLabel(activeCellPosition.column) }}{{ activeCellPosition.row }}:
@@ -20,9 +20,9 @@
             </form>
         </div>
         <div gdArea="add_column">
-            <div (click)="addColumnClicked.emit()" class="tool">
+            <button (click)="addColumnClicked.emit()" class="tool" title="Add Column">
                 <mat-icon>arrow_right_alt</mat-icon>
-            </div>
+            </button>
         </div>
         
     </section>
@@ -59,7 +59,7 @@
                 *ngFor="let cell of counter(rows * columns); let i = index" 
                 [class.active]="isCellActive(i)"
                 (click)="cellClick(i)">
-                {{ getCellValue(i) | arithmetic | async }}
+                {{ getCellValue(i) | expression | async | conditionalNumber }}
             </div>
         </section>
 
