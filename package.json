@@ -17,9 +17,9 @@
     "e2e": "./node_modules/.bin/cypress run",
     "build:e2e:fixtures": "./node_modules/.bin/ts-node ./cypress/support/scripts/simplify-open-library-books-json.ts",
     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
-    "build-demo": "npm run build-analyze && npm run move-analysis-report && npm run compodoc",
-    "compodoc": "npx compodoc -p tsconfig.json -d ./dist/docs src",
-    "serve-docs": "compodoc -s -d ./dist/docs"
+    "build-demo": "npm run build-analyze && npm run move-analysis-report && npm run build-docs",
+    "build-docs": "npx compodoc src -p tsconfig.json -d ./dist/docs -n ngExcel-Documentation",
+    "serve-docs": "npx compodoc -s -p tsconfig.json -d ./dist/docs -n ngExcel-Documentation -w" 
   },
   "greenkeeper": {
     "ignore": [
@@ -58,12 +58,6 @@
     "@babel/core": "^7.8.4",
     "@compodoc/compodoc": "^1.1.11",
     "@cypress/webpack-preprocessor": "^4.1.0",
-    "@storybook/addon-actions": "^5.3.13",
-    "@storybook/addon-knobs": "^5.3.13",
-    "@storybook/addon-links": "^5.3.13",
-    "@storybook/addon-notes": "^5.3.13",
-    "@storybook/addons": "^5.3.13",
-    "@storybook/angular": "^5.3.13",
     "@types/jest": "^25.1.0",
     "@types/node": "~13.7.0",
     "babel-loader": "^8.0.6",
