@@ -7,6 +7,10 @@ import { map } from 'rxjs/operators'
 import { selectAllSpreadsheetCells } from '../../spreadsheet-data/selectors/spreadsheet-ui.selectors'
 import { getCellAddressByPosition } from '../../spreadsheet-data/helpers/cell.helpers'
 
+/**
+ * @example
+ *  <div>{{ '= d2 * 2' | expression | async | conditionalNumber }}</div>
+ */
 @Pipe({name: 'expression', pure: false})
 export class ExpressionEvaluationPipe implements PipeTransform {
   constructor(private store: Store<any>) {}
