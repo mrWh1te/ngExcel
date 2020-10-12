@@ -45,7 +45,7 @@ To learn more about the ground floor architectural patterns used in this applica
 
 The Spreadsheet is designed to minimize memory consumption both in the JS heap and in the rendered UI's HTML. It uses CSS Grid and saves spreadsheet's rows and columns, not a value for every spreadsheet cell. As you enter data into the Spreadsheet, the cell values are then created and stored in the application state.
 
-Never the less, there is plenty of room for improvement. A "cache" hash-map of 1:1 look-up can improve the rendering of the spreadsheet (ie expression evaluation). Could stop lazily loading the SpreadsheetViewModule, and just import it directly into AppModule. Also, can delete cells from app state as the values are cleared. And more! With its current design, additional pipes can be added to "format" the cells look. The formatting could be kept separate from the cell values stored, then applied at the end of the bounded UI pipe.
+Never the less, there is plenty of room for improvement. A "cache" hash-map of 1:1 look-up can improve the rendering of the spreadsheet (ie expression evaluation). Could stop lazily loading the SpreadsheetViewModule, and just import it directly into AppModule. Also, can delete cells from app state as the values are cleared. And more! With its current design, additional pipes can be added to "format" the cells look. The formatting could be kept separate from the cell values stored, then applied at the end of the binded UI pipe.
 
 ## Documentation
 This project's documentation is generated with [Compodoc](https://compodoc.app/). You can view any time, online, right [here](http://ngexcel-demo.netlify.app/docs).
