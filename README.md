@@ -32,7 +32,7 @@ Spreadsheet
 
 The data module is done with redux, so if you have the Redux devtools installed in your browser, you can play around. Otherwise, open the Chrome/Safari/What have you Devtools for the Console. Every action is logged there with pretty style.
 
-# Architecture Overview
+## Architecture Overview
 This project is based on ngLibrary therefore it uses ngLibrary's core programming values:
 1) Single Responsibility Principle (SRP)
     - separate concerns, reduce code risks, promote individual growth
@@ -41,9 +41,11 @@ This project is based on ngLibrary therefore it uses ngLibrary's core programmin
 3) Good Developer Experience (DX)
     - balance DRY & WET programming principles, don't reinvent the wheel
 
-First, ngLibrary's coding patterns focuses on reducing high cost code risks while separating code into mangeable units, then applying efforts to minimize TTI, and finally approaching the code to maintain a positive developers' experience.
+To learn more about the ground floor architectural patterns used in this application, check out [ngLibrary's Readme](https://github.com/mrWh1te/ngLibrary#nglibrary). This project follows its Enterprise programming patterns. The readme explains the rudimentary patterns and their corresponding programming values.
 
-To learn more about the ground floor architectural patterns used in this application, check out [ngLibrary's Readme](https://github.com/mrWh1te/ngLibrary#nglibrary). This project follows its Enterprise programming patterns. The readme explains the rudimentary patterns and which programming value(s) they ascribe too.
+The Spreadsheet is designed to minimize memory consumption both in the JS heap and in the rendered UI's HTML. It uses CSS Grid and saves spreadsheet's rows and columns, not a value for every spreadsheet cell. As you enter data into the Spreadsheet, the cell values are then created and stored in the application state.
+
+Never the less, there is plenty of room for improvement. A "cache" hash-map of 1:1 look-up can improve the rendering of the spreadsheet (ie expression evaluation). Could stop lazily loading the SpreadsheetViewModule, and just import it directly into AppModule. Also, can delete cells from app state as the values are cleared. And more! With its current design, additional pipes can be added to "format" the cells look. The formatting could be kept separate from the cell values stored, then applied at the end of the bounded UI pipe.
 
 ## Documentation
 This project's documentation is generated with [Compodoc](https://compodoc.app/). You can view any time, online, right [here](http://ngexcel-demo.netlify.app/docs).
