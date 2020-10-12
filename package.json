@@ -43,7 +43,7 @@
     "@ngrx/store": "^9.2.0",
     "@ngrx/store-devtools": "^9.2.0",
     "lodash-es": "^4.17.15",    
-    "npm": "^6.13.4",
+    "npm": "^6.14.6",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.3"
