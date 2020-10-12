@@ -7,6 +7,13 @@ import { map } from 'rxjs/operators'
 import { selectAllSpreadsheetCells } from '../../spreadsheet-data/selectors/spreadsheet-ui.selectors'
 import { getCellAddressByPosition } from '../../spreadsheet-data/helpers/cell.helpers'
 
+/**
+ * Evaluates algebraic expressions using the Spreadsheet's state to fill-in values for Cell addresses. 
+ * It returns an Observable so pair it with the `async` pipe.
+ * 
+ * @example
+ *  <div>{{ '= d2 * 2' | expression | async }}</div>
+ */
 @Pipe({name: 'expression', pure: false})
 export class ExpressionEvaluationPipe implements PipeTransform {
   constructor(private store: Store<any>) {}

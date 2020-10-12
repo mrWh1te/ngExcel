@@ -6,7 +6,7 @@
     "lint": "ng lint",
     "start": "ng serve",
     "build": "ng build",
-    "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer -O -m static ./dist/stats.json",
+    "build-analyze": "ng build --prod --stats-json && webpack-bundle-analyzer -O -m static ./dist/stats.json",
     "move-analysis-report": "cp report.html dist/report.html",
     "test": "npm run tests",
     "tests": "npm run unit-tests && npm run e2e",
@@ -17,7 +17,9 @@
     "e2e": "./node_modules/.bin/cypress run",
     "build:e2e:fixtures": "./node_modules/.bin/ts-node ./cypress/support/scripts/simplify-open-library-books-json.ts",
     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
-    "build-demo": "npm run analyze && npm run move-analysis-report"
+    "build-demo": "npm run build-analyze && npm run move-analysis-report && npm run build-docs",
+    "build-docs": "npx compodoc src -p tsconfig.json -d ./dist/docs -n ngExcel-Documentation",
+    "serve-docs": "npx compodoc -s -p tsconfig.json -d ./dist/docs -n ngExcel-Documentation -w" 
   },
   "greenkeeper": {
     "ignore": [
@@ -42,7 +44,7 @@
     "@ngrx/router-store": "^9.2.0",
     "@ngrx/store": "^9.2.0",
     "@ngrx/store-devtools": "^9.2.0",
-    "lodash-es": "^4.17.15",    
+    "lodash-es": "^4.17.15",
     "npm": "^6.14.6",
     "rxjs": "~6.6.0",
     "tslib": "^1.10.0",
@@ -54,13 +56,8 @@
     "@angular/compiler-cli": "~10.0.2",
     "@angular/language-service": "~10.0.3",
     "@babel/core": "^7.8.4",
+    "@compodoc/compodoc": "^1.1.11",
     "@cypress/webpack-preprocessor": "^4.1.0",
-    "@storybook/addon-actions": "^5.3.13",
-    "@storybook/addon-knobs": "^5.3.13",
-    "@storybook/addon-links": "^5.3.13",
-    "@storybook/addon-notes": "^5.3.13",
-    "@storybook/addons": "^5.3.13",
-    "@storybook/angular": "^5.3.13",
     "@types/jest": "^25.1.0",
     "@types/node": "~13.7.0",
     "babel-loader": "^8.0.6",
