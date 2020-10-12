@@ -5,7 +5,7 @@
 <img align="right" src="https://raw.githubusercontent.com/mrWh1te/ngExcel/master/spreadsheet.png" width="175" alt="Spreadsheet App Icon" />
 <!-- Icon author: https://pixabay.com/vectors/spreadsheet-application-window-grid-147749/ -->
 
-[App Demo](http://ngexcel-demo.netlify.app) - [App Bundles' Analysis Report](http://ngexcel-demo.netlify.app/report.html) - [App Documentation](http://ngexcel-demo.netlify.app/docs)
+[App Demo](http://ngexcel-demo.netlify.app) - [App Bundles' Analysis Report](http://ngexcel-demo.netlify.app/report.html) - [App Documentation](http://ngexcel-demo.netlify.app/docs/overview.html)
 
 A Spreadsheet Application built with Angular v10 using [ngLibrary](https://github.com/mrWh1te/ngLibrary) as a starting code template, for its Enterprise Reactive architecture.
 
