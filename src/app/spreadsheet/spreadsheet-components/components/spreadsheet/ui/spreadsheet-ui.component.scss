@@ -1,3 +1,5 @@
+@import './../../../../../../styles/helpers/transforms';
+
 $blue: rgb(26, 115, 232);
 $light_blue: rgba(26, 115, 232, .2);
 
@@ -41,6 +43,20 @@ section, div, form, input {
         border: none !important;
         &:hover {
             cursor: pointer;
+        }
+    }
+    [gdarea="add_row"], [gdarea="add_column"] {
+        button {
+            outline: 0;
+            svg {
+                width: .8rem;
+                &.special {
+                    // todo remove this with proper container that aligns children
+                    position: relative;
+                    left: 6px;
+                    top: 1px;
+                }
+            }
         }
     }
     [gdarea="add_row"] button {
@@ -119,8 +135,4 @@ section, div, form, input {
             width: 6rem;
         }
     }
-}
-
-.rotate-clockwise-90 {
-    transform: rotate(90deg);
 }

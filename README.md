@@ -99,3 +99,7 @@ Then navigate to `http://localhost:4200/` in your browser. The app will automati
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 The frontend project's initial commit was generated with [ngLibrary](github.com/mrWh1te/ngLibrary) as the repository template.
+
+## Contributions
+
+- Icons from [Inkscape](http://www.inkscape.org/) & [Icons8](https://icons8.com/icons/set/reset)

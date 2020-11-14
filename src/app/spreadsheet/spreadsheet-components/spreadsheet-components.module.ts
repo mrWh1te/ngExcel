@@ -1,7 +1,6 @@
 import { NgModule } from "@angular/core"
 import { CommonModule, DecimalPipe } from '@angular/common'
 import { ReactiveFormsModule } from '@angular/forms'
-import { MatIconModule } from '@angular/material/icon'
 import { FlexLayoutModule } from '@angular/flex-layout'
 
 import { SpreadsheetComponent } from './components/spreadsheet/smart/spreadsheet.component'
@@ -16,7 +15,6 @@ import { ConditionalNumberPipe } from './pipes/conditional-number.pipe'
     ReactiveFormsModule,
     CommonModule,
     FlexLayoutModule,
-    MatIconModule
   ],
   declarations: [
     SpreadsheetComponent,
