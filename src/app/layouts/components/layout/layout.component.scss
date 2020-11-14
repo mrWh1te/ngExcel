@@ -14,7 +14,7 @@ header.layout {
   -webkit-box-shadow: 2px -5px 6px 5px $gray;
   box-shadow:         2px -5px 6px 5px $gray;
 
-  mat-icon {
+  .icon {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -28,8 +28,11 @@ header.layout {
   }
 }
 
-mat-icon.checkout {
+.reset {
   margin-left: 1rem;
+  svg {
+    width: 1rem;
+  }
 }
 
 body {
