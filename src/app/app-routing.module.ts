@@ -18,8 +18,9 @@ export const RootRoutes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(RootRoutes, {
-    preloadingStrategy: PreloadAllModules
-  })],
+    preloadingStrategy: PreloadAllModules,
+    relativeLinkResolution: 'legacy'
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
