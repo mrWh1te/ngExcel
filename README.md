@@ -104,4 +104,5 @@ The frontend project's initial commit was generated with [ngLibrary](github.com/
 
 ## Contributions
 
-- Icons from [Inkscape](http://www.inkscape.org/) & [Icons8](https://icons8.com/icons/set/reset)
+- App Icon from [Pixabay](https://pixabay.com/vectors/spreadsheet-application-window-grid-147749/)
+- UI Icons from [Inkscape](http://www.inkscape.org/) & [Icons8](https://icons8.com/icons/set/reset)
