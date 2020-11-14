@@ -1,4 +1,5 @@
 @import './../../../../../../styles/helpers/transforms';
+@import './../../../../../../styles/accessibility';
 
 $blue: rgb(26, 115, 232);
 $light_blue: rgba(26, 115, 232, .2);
@@ -31,9 +32,6 @@ section, div, form, input {
             background: none;
             outline: 0;
             padding-left: .5rem;
-        }
-        label {
-            display: none;
         }
     }
     [gdarea="add_row"], [gdarea="add_column"] {
