@@ -7,7 +7,7 @@
 
 [App Demo](http://ngexcel-demo.netlify.app) - [App Bundles' Analysis Report](http://ngexcel-demo.netlify.app/report.html) - [App Documentation](http://ngexcel-demo.netlify.app/docs/overview.html)
 
-A Spreadsheet Application built with Angular v10 using [ngLibrary](https://github.com/mrWh1te/ngLibrary) as a starting code template, for its Enterprise Reactive architecture.
+A Spreadsheet Application built with Angular v11 using [ngLibrary](https://github.com/mrWh1te/ngLibrary) as a starting code template, for its Enterprise Reactive architecture.
 
 Have fun!
 
@@ -26,6 +26,8 @@ Spreadsheet
     - Algebraic expressions support Spreadsheet Cell Addresses
         - example: `= (A1 + B1)*10`
         - Algebraic expressions must start with `=`, no spaces before
+        - Note: you can use Javascript in these expressions, including referencing globals from variables to Math.pow() ;)
+            - `= Math.pow(a1 + b2)`
 - Uses CSS Grid directives from Flex-Layout module
     - spreadsheet is entirely done with CSS grid
     - mobile friendly
