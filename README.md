@@ -27,7 +27,7 @@ Spreadsheet
         - example: `= (A1 + B1)*10`
         - Algebraic expressions must start with `=`, no spaces before
         - Note: you can use Javascript in these expressions, including referencing globals from variables to Math.pow() ;)
-            - `= Math.pow(a1 + b2)`
+            - `= Math.round(a1 + b2)`
 - Uses CSS Grid directives from Flex-Layout module
     - spreadsheet is entirely done with CSS grid
     - mobile friendly
