@@ -32,6 +32,9 @@ section, div, form, input {
             outline: 0;
             padding-left: .5rem;
         }
+        label {
+            display: none;
+        }
     }
     [gdarea="add_row"], [gdarea="add_column"] {
         display: grid;
